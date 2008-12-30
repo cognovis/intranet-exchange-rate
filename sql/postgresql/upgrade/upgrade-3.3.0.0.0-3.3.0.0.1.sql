@@ -110,9 +110,8 @@ BEGIN
     return 0;
 end;' language 'plpgsql';
 
-select im_exchange_rate_fill_holes_2009 ('USD');
-select im_exchange_rate_fill_holes_2009 ('JPY');
-select im_exchange_rate_fill_holes_2009 ('EUR');
-select im_exchange_rate_fill_holes_2009 ('CAD');
-select im_exchange_rate_fill_holes_2009 ('AUD');
-
+-- select im_exchange_rate_fill_holes_2009 ('USD');
+-- select im_exchange_rate_fill_holes_2009 ('JPY');
+-- select im_exchange_rate_fill_holes_2009 ('EUR');
+-- select im_exchange_rate_fill_holes_2009 ('CAD');
+-- select im_exchange_rate_fill_holes_2009 ('AUD');
