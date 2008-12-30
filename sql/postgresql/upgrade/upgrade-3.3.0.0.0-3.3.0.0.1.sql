@@ -42,7 +42,7 @@ BEGIN
 	END IF;	
 
 	IF exists = 0 AND p_currency = ''JPY'' THEN
-		insert into im_exchange_rates (day, rate, currency, manual_p) values (''2008-12-29'', 0.0111, ''JPY'', ''t'');
+		insert into im_exchange_rates (day, rate, currency, manual_p) values (''2008-12-29'', 0.011100, ''JPY'', ''t'');
 	END IF;	
 
 	IF exists = 0 AND p_currency = ''EUR'' THEN
