@@ -31,19 +31,29 @@ BEGIN
 	--  2008-12-28 | CAD      | 0.950060 | f
 	--  2008-12-28 | AUD      | 0.872520 | f
 
-	-- insert most recent exchange rates and set manual_p to 't' so that following filling routine uses this value 	
+	-- insert most recent exchange rates and set manual_p to -t- so that following filling routine uses this value 	
 
         select  count(*) into exists
         from im_exchange_rates
-        where day='2008-12-29' and currency=p_currency;
-        IF exists = 0 THEN
-	CASE p_currency
-		WHEN 'USD' THEN insert into im_exchange_rates (day, rate, currency, manual_p) values ('2008-12-29', 1.000000, 'USD', ''t'')
-		WHEN 'JPY' THEN insert into im_exchange_rates (day, rate, currency, manual_p) values ('2008-12-29', 90.35500, 'JPY', ''t'')
-		WHEN 'EUR' THEN insert into im_exchange_rates (day, rate, currency, manual_p) values ('2008-12-29', 0.708400, 'EUR', ''t'')
-		WHEN 'CAD' THEN insert into im_exchange_rates (day, rate, currency, manual_p) values ('2008-12-29', 1.222500, 'CAD', ''t'')
-		WHEN 'AUD' THEN insert into im_exchange_rates (day, rate, currency, manual_p) values ('2008-12-29', 1.448400, 'AUD', ''t'') 
-        END IF;
+        where day=''2008-12-29'' and currency=p_currency;
+
+	IF exists = 0 AND p_currency = ''USD'' THEN
+		insert into im_exchange_rates (day, rate, currency, manual_p) values (''2008-12-29'', 1.000000, ''USD'', ''t'');
+	END IF;	
+
+	IF exists = 0 AND p_currency = ''JPY'' THEN
+		insert into im_exchange_rates (day, rate, currency, manual_p) values (''2008-12-29'', 0.0111, ''JPY'', ''t'');
+	END IF;	
+
+	IF exists = 0 AND p_currency = ''EUR'' THEN
+		insert into im_exchange_rates (day, rate, currency, manual_p) values (''2008-12-29'', 1.411600, ''EUR'', ''t'');
+	END IF;	
+	IF exists = 0 AND p_currency = ''CAD'' THEN
+		insert into im_exchange_rates (day, rate, currency, manual_p) values (''2008-12-29'', 0.818000, ''CAD'', ''t'');
+	END IF;	
+	IF exists = 0 AND p_currency = ''AUD'' THEN
+		insert into im_exchange_rates (day, rate, currency, manual_p) values (''2008-12-29'', 0.690400, ''AUD'', ''t'');
+	END IF;	
 
     RAISE NOTICE ''im_exchange_rate_fill_holes: cur=%'', p_currency;
 
