@@ -9,7 +9,7 @@
 
 ----------------------------------------------------
 
-SELECT acs_log__debug('/packages/intranet-exchange-rate/sql/postgresql/upgrade/upgrade-3.3.0.0.1-3.3.0.0.2.sql','');
+SELECT acs_log__debug('/packages/intranet-exchange-rate/sql/postgresql/upgrade/upgrade-3.3.2.0.1-3.3.2.0.2.sql','');
 
 -- Updated "fill_holes" updating until 2015
 -- Still ugly somehow...
