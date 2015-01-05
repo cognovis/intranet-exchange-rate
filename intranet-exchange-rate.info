@@ -9,7 +9,7 @@
     <singleton-p>t</singleton-p>
     <auto-mount>intranet-exchange-rate</auto-mount>
 
-    <version name="4.1.0.0.0" url="http://www.project-open.org/download/apm/intranet-exchange-rate-4.1.0.0.0.apm">
+    <version name="4.1.0.0.1" url="http://www.project-open.org/download/apm/intranet-exchange-rate-4.1.0.0.1.apm">
 
         <owner url="mailto:frank.bergmann@project-open.com">Frank Bergmann</owner>
         <summary>Allows to maintain and query currency exchange rates</summary>
@@ -20,8 +20,8 @@
 	  format in order to allow for fast SQL joins.
         </description>
 
-        <provides url="intranet-exchange-rate" version="3.4.0.2.0"/>
-        <requires url="intranet-core" version="3.4.0.0.0"/>
+        <provides url="intranet-exchange-rate" version="4.1.0.0.1"/>
+        <requires url="intranet-core" version="4.1.0.0.0"/>
 
         <callbacks>
         </callbacks>
